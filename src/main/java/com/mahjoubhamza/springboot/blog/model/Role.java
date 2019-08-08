@@ -17,7 +17,7 @@ public class Role {
     private Long id;
 
     @Column(name = "role", unique = true)
-    private String role;
+    private String roleName;
 
 
     @ManyToMany(cascade = CascadeType.ALL, mappedBy = "roles")
@@ -32,11 +32,11 @@ public class Role {
     }
 
     public String getRole() {
-        return role;
+        return roleName;
     }
 
     public void setRole(String role) {
-        this.role = role;
+        this.roleName = role;
     }
 
     public Collection<User> getUsers() {
